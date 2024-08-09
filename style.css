@@ -1,0 +1,229 @@
+:root {
+    --background-color-menu: #222222;
+    --primary-color-text: white;
+    --bg-color-body: #161513;
+  }
+  
+  body {
+    background-color: var(--bg-color-body);
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  nav {
+    background-color: var(--background-color-menu);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: fixed; 
+    right: 20px; 
+    top: 20px; 
+    z-index: 2; 
+  }
+  
+  .menu-toggle span {
+    background-color: var(--primary-color-text);
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+  }
+  
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    width: 815px;
+    height: 7vh;
+    box-sizing: border-box;
+    margin: 0;
+    position: relative;
+  }
+  
+  li {
+    margin: 0px 20px;
+    color: var(--primary-color-text);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  li:first-child {
+    margin-right: auto;
+  }
+  
+  #logo-menu {
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary-color-text);
+  }
+  
+  .principal {
+    color: var(--primary-color-text);
+    max-width: 815px;
+    margin: 10vh auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #avatar {
+    width: 250px;
+  }
+  
+  .button-principal {
+    max-width: 415px;
+  }
+  
+  #primeiroBTN {
+    font-weight: 700;
+    padding: 15px 60px;
+    background-color: white;
+    border-radius: 15px;
+    border: none;
+    color: black;
+  }
+  
+  #segundoBTN {
+    font-weight: 700;
+    padding: 15px 60px;
+    color: white;
+    background-color: var(--bg-color-body);
+    border-radius: 15px;
+    border: 1px solid white;
+  }
+  
+  #primeiroBTN,
+  #segundoBTN:hover {
+    cursor: pointer;
+  }
+  
+  #experienceSec {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .experience {
+    max-width: 815px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #logosTec {
+    margin: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .imgProjetos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  figure {
+    width: 45%;
+  }
+  
+  figure img {
+    width: 100%;
+    height: auto;
+  }
+  
+  figcaption {
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+    color: white;
+    background-color: #2a2a2a;
+    text-align: center;
+  }
+  
+  /* Responsividade */
+  @media screen and (max-width: 900px) {
+    .menu-toggle {
+      display: flex;
+    }
+  
+    ul {
+      display: none; 
+      position: fixed; 
+      top: 0;
+      right: 0; 
+      background-color: var(--background-color-menu);
+      flex-direction: column;
+      align-items: flex-start;
+      width: 75%; 
+      height: 100vh;
+      padding-top: 8vh;
+      padding-left: 20px;
+      transform: translateX(100%); 
+      transition: transform 0.3s ease-in-out;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3); 
+      z-index: 1; 
+    }
+  
+    ul.show {
+      display: flex; 
+      transform: translateX(0); 
+    }
+  
+    li {
+      margin: 20px 0;
+    }
+  
+    .principal {
+      margin: 5vh auto;
+      padding: 0 20px;
+    }
+  
+    #avatar {
+      width: 150px;
+    }
+  
+    .button-principal {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    #primeiroBTN,
+    #segundoBTN {
+      padding: 10px 40px;
+    }
+  
+    .imgProjetos {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    figure {
+      width: 80%;
+    }
+  
+    figcaption {
+      font-size: 14px;
+    }
+  }
+  
