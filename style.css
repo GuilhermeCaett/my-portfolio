@@ -227,3 +227,23 @@
     }
   }
   
+#degrade{
+    background-image: linear-gradient(15deg, #FF8660, #9A33FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#degradeLaranja{
+    background-image: linear-gradient(15deg, #FF8660, #D5491D);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#degradeAzul{
+    background-image: linear-gradient(15deg, #5BADFF, #1373D1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
